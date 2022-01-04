@@ -218,9 +218,9 @@ border-radius:5px;</string>
     <widget class="QLabel" name="input_saida">
      <property name="geometry">
       <rect>
-       <x>85</x>
+       <x>45</x>
        <y>290</y>
-       <width>134</width>
+       <width>197</width>
        <height>20</height>
       </rect>
      </property>
@@ -374,7 +374,7 @@ background-color:rgb(116, 116, 116);
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-239</y>
+        <y>0</y>
         <width>145</width>
         <height>518</height>
        </rect>

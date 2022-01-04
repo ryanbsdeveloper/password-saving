@@ -8,19 +8,28 @@ class BD:
     def __init__(self):
         self.conexao = sqlite3.connect(rf'{BASE_DIR}\users.db')
         self.cursor = self.conexao.cursor()
-        self.cont = 0
+        self.cont_BD = 0
         self.lista_contas = []
         self.dict = {}
+        self.criar_tabela_admin()
+        self.criar_tabela()
         self.mostrar_conta()
 
     def criar_tabela(self):
         self.cursor.execute('CREATE TABLE IF NOT EXISTS contas ('
                             'id INTEGER PRIMARY KEY AUTOINCREMENT,'
-                            'nome TEXT,'
+                            'nome TEXT ,'
                             'sobrenome TEXT)')
         self.conexao.commit()
 
-    def inserir_conta(self, nome, sobrenome):
+    def tabela_cada_conta(self, nome):
+        self.cursor.execute(f'CREATE TABLE IF NOT EXISTS {nome} ('
+                            'id INTEGER PRIMARY KEY AUTOINCREMENT,'
+                            'site TEXT,'
+                            'senha TEXT)')
+        self.conexao.commit()
+
+    def inserir_contas(self, nome, sobrenome):
         consulta = f'INSERT INTO contas (nome, sobrenome) VALUES (?, ?)'
         self.cursor.execute(consulta, (nome, sobrenome))
         self.conexao.commit()
@@ -28,7 +37,7 @@ class BD:
     def mostrar_conta(self):
         self.cursor.execute('SELECT * FROM contas')
         for v in self.cursor.fetchall():
-            self.cont += 1
+            self.cont_BD += 1
             id, nome, sobrenome = v
             self.dict['id'] = id
             self.dict['nome'] = nome
@@ -43,12 +52,14 @@ class BD:
 
         return cont
 
-    def inserir_admin(self, senha):
+    def criar_tabela_admin(self):
         self.cursor.execute('CREATE TABLE IF NOT EXISTS admin ('
                             'id INTEGER PRIMARY KEY AUTOINCREMENT,'
                             'senha TEXT UNIQUE)')
         self.conexao.commit()
 
+    def inserir_admin(self, senha):
         consulta = f'INSERT OR IGNORE INTO admin (senha) VALUES (?)'
         self.cursor.execute(consulta, (senha,))
         self.conexao.commit()
+
