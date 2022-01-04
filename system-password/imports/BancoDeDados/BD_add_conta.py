@@ -52,8 +52,3 @@ class BD:
         consulta = f'INSERT OR IGNORE INTO admin (senha) VALUES (?)'
         self.cursor.execute(consulta, (senha,))
         self.conexao.commit()
-
-
-db = BD()
-print(db.lista_contas)
-

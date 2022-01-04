@@ -4,7 +4,6 @@ from PyQt5.QtGui import QPixmap, QIcon
 from windows.UI import UI_janela_inicial, UI_janela_admin
 from imports.BancoDeDados import BD_add_conta
 
-cont = 0
 
 class TelaInicial(QMainWindow):
     def __init__(self):
@@ -20,9 +19,7 @@ class TelaInicial(QMainWindow):
         # btn cadastrar
         self.ui.btn_criar_2.clicked.connect(self.cadastro)
 
-    def contas_salvas(self):
-        pass
-
+        self.cont = 0
 
     def cadastro(self):
         if self.ui.input_nome_2.text().isnumeric() or self.ui.input_sobrenome_2.text().isnumeric() or len(
@@ -37,9 +34,13 @@ class TelaInicial(QMainWindow):
                 self.ui.input_saida.setText('Conta já cadastrada!')
             else:
                 self.cont += 1
+
                 self.ui.input_saida.setStyleSheet('color:green;font: 87 italic 10pt "Segoe UI Black";')
                 self.ui.input_saida.setText('Cadastro concluído!')
 
+                # adicionando dados do bd
+
+               
                 # mostrando nome da conta
                 nome_completo = f'{str(self.ui.input_nome_2.text()).capitalize()} {str(self.ui.input_sobrenome_2.text()).capitalize()}'
                 if len(nome_completo) > 10:
