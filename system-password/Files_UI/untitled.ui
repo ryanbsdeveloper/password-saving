@@ -374,7 +374,7 @@ background-color:rgb(116, 116, 116);
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
+        <y>-239</y>
         <width>145</width>
         <height>518</height>
        </rect>
@@ -521,6 +521,23 @@ color:black;</string>
             <string/>
            </property>
           </widget>
+          <widget class="QLabel" name="nome_conta_2">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </widget>
          <widget class="QFrame" name="user_3">
           <property name="geometry">
@@ -551,6 +568,42 @@ color:black;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_entrar_3">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_3">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
            </property>
            <property name="text">
             <string/>
@@ -591,6 +644,42 @@ color:black;</string>
             <string/>
            </property>
           </widget>
+          <widget class="QPushButton" name="btn_entrar_4">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_4">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </widget>
          <widget class="QFrame" name="user_5">
           <property name="geometry">
@@ -621,6 +710,42 @@ color:black;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_entrar_5">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_5">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
            </property>
            <property name="text">
             <string/>
@@ -661,6 +786,42 @@ color:black;</string>
             <string/>
            </property>
           </widget>
+          <widget class="QPushButton" name="btn_entrar_6">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_6">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </widget>
          <widget class="QFrame" name="user_7">
           <property name="geometry">
@@ -691,6 +852,42 @@ color:black;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_entrar_7">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_7">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
            </property>
            <property name="text">
             <string/>
@@ -731,6 +928,42 @@ color:black;</string>
             <string/>
            </property>
           </widget>
+          <widget class="QPushButton" name="btn_entrar_8">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_8">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </widget>
          <widget class="QFrame" name="user_9">
           <property name="geometry">
@@ -761,6 +994,42 @@ color:black;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_entrar_9">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_9">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
            </property>
            <property name="text">
             <string/>
@@ -801,6 +1070,42 @@ color:black;</string>
             <string/>
            </property>
           </widget>
+          <widget class="QPushButton" name="btn_entrar_10">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_10">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </widget>
          <widget class="QFrame" name="user_11">
           <property name="geometry">
@@ -831,6 +1136,42 @@ color:black;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_entrar_11">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_11">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
            </property>
            <property name="text">
             <string/>
@@ -871,6 +1212,42 @@ color:black;</string>
             <string/>
            </property>
           </widget>
+          <widget class="QPushButton" name="btn_entrar_12">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_12">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </widget>
          <widget class="QFrame" name="user_13">
           <property name="geometry">
@@ -901,6 +1278,42 @@ color:black;</string>
            </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_entrar_13">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_13">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
            </property>
            <property name="text">
             <string/>
@@ -941,6 +1354,42 @@ color:black;</string>
             <string/>
            </property>
           </widget>
+          <widget class="QPushButton" name="btn_entrar_14">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_14">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </widget>
          <widget class="QFrame" name="user_15">
           <property name="geometry">
@@ -976,6 +1425,42 @@ color:black;</string>
             <string/>
            </property>
           </widget>
+          <widget class="QPushButton" name="btn_entrar_15">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_15">
+           <property name="geometry">
+            <rect>
+             <x>10</x>
+             <y>10</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </widget>
          <widget class="QFrame" name="user_16">
           <property name="geometry">
@@ -1005,7 +1490,43 @@ color:black;</string>
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true"/>
+            <string notr="true">border-radius:1px</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="btn_entrar_16">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="geometry">
+            <rect>
+             <x>84</x>
+             <y>5</y>
+             <width>20</width>
+             <height>20</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border-radius:1px;</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="nome_conta_16">
+           <property name="geometry">
+            <rect>
+             <x>3</x>
+             <y>5</y>
+             <width>72</width>
+             <height>23</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">font-weight: bold;
+color:black;</string>
            </property>
            <property name="text">
             <string/>

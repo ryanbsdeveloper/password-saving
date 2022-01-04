@@ -8,6 +8,10 @@ class BD:
     def __init__(self):
         self.conexao = sqlite3.connect(rf'{BASE_DIR}\users.db')
         self.cursor = self.conexao.cursor()
+        self.cont = 0
+        self.lista_contas = []
+        self.dict = {}
+        self.mostrar_conta()
 
     def criar_tabela(self):
         self.cursor.execute('CREATE TABLE IF NOT EXISTS contas ('
@@ -22,7 +26,14 @@ class BD:
         self.conexao.commit()
 
     def mostrar_conta(self):
-        self
+        self.cursor.execute('SELECT * FROM contas')
+        for v in self.cursor.fetchall():
+            self.cont += 1
+            id, nome, sobrenome = v
+            self.dict['id'] = id
+            self.dict['nome'] = nome
+            self.dict['sobrenome'] = sobrenome
+            self.lista_contas.append(self.dict.copy())
 
     def verificar_admin(self):
         self.cursor.execute('SELECT * FROM admin')
@@ -41,4 +52,8 @@ class BD:
         consulta = f'INSERT OR IGNORE INTO admin (senha) VALUES (?)'
         self.cursor.execute(consulta, (senha,))
         self.conexao.commit()
+
+
+db = BD()
+print(db.lista_contas)
 
