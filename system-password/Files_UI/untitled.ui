@@ -201,6 +201,9 @@ color:#fbfbfe;</string>
        <height>16777215</height>
       </size>
      </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="styleSheet">
       <string notr="true">
 border-radius:5px;</string>
@@ -295,6 +298,9 @@ border-radius:5px;</string>
        <height>281</height>
       </rect>
      </property>
+     <property name="cursor" stdset="0">
+      <cursorShape>ArrowCursor</cursorShape>
+     </property>
      <property name="styleSheet">
       <string notr="true">QScrollBar:vertical{
 	boder:none;
@@ -374,10 +380,13 @@ background-color:rgb(116, 116, 116);
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
+        <y>-239</y>
         <width>145</width>
         <height>518</height>
        </rect>
+      </property>
+      <property name="cursor">
+       <cursorShape>ArrowCursor</cursorShape>
       </property>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="0">
@@ -412,7 +421,7 @@ background-color:rgb(116, 116, 116);
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <widget class="QPushButton" name="btn_entrar_1">
+          <widget class="QPushButton" name="btn_editar_1">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -424,11 +433,20 @@ background-color:rgb(116, 116, 116);
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
            </property>
           </widget>
           <widget class="QPushButton" name="btn_apagar_1">
@@ -443,25 +461,42 @@ background-color:rgb(116, 116, 116);
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
+           <property name="acceptDrops">
+            <bool>false</bool>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_1">
+          <widget class="QPushButton" name="btn_entrar_1">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -483,7 +518,7 @@ color:black;</string>
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <widget class="QPushButton" name="btn_entrar_2">
+          <widget class="QPushButton" name="btn_editar_2">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -495,11 +530,20 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
            </property>
           </widget>
           <widget class="QPushButton" name="btn_apagar_2">
@@ -514,25 +558,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_2">
+          <widget class="QPushButton" name="btn_entrar_2">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -566,14 +624,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_3">
+          <widget class="QPushButton" name="btn_editar_3">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -585,25 +652,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_3">
+          <widget class="QPushButton" name="btn_entrar_3">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -637,14 +718,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_4">
+          <widget class="QPushButton" name="btn_editar_4">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -656,25 +746,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_4">
+          <widget class="QPushButton" name="btn_entrar_4">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -708,14 +812,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_5">
+          <widget class="QPushButton" name="btn_editar_5">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -727,25 +840,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_5">
+          <widget class="QPushButton" name="btn_entrar_5">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -779,14 +906,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_6">
+          <widget class="QPushButton" name="btn_editar_6">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -798,25 +934,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_6">
+          <widget class="QPushButton" name="btn_entrar_6">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -850,14 +1000,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_7">
+          <widget class="QPushButton" name="btn_editar_7">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -869,25 +1028,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_7">
+          <widget class="QPushButton" name="btn_entrar_7">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -921,14 +1094,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_8">
+          <widget class="QPushButton" name="btn_editar_8">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -940,25 +1122,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_8">
+          <widget class="QPushButton" name="btn_entrar_8">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -992,14 +1188,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_9">
+          <widget class="QPushButton" name="btn_editar_9">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -1011,25 +1216,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_9">
+          <widget class="QPushButton" name="btn_entrar_9">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -1063,14 +1282,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_10">
+          <widget class="QPushButton" name="btn_editar_10">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -1082,25 +1310,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_10">
+          <widget class="QPushButton" name="btn_entrar_10">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -1134,14 +1376,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_11">
+          <widget class="QPushButton" name="btn_editar_11">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -1153,25 +1404,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_11">
+          <widget class="QPushButton" name="btn_entrar_11">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -1205,14 +1470,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_12">
+          <widget class="QPushButton" name="btn_editar_12">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -1224,25 +1498,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_12">
+          <widget class="QPushButton" name="btn_entrar_12">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -1276,14 +1564,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_13">
+          <widget class="QPushButton" name="btn_editar_13">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -1295,25 +1592,36 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_13">
+          <widget class="QPushButton" name="btn_entrar_13">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -1347,14 +1655,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_14">
+          <widget class="QPushButton" name="btn_editar_14">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -1366,25 +1683,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_14">
+          <widget class="QPushButton" name="btn_entrar_14">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -1418,14 +1749,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_15">
+          <widget class="QPushButton" name="btn_editar_15">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -1437,25 +1777,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_15">
+          <widget class="QPushButton" name="btn_entrar_15">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
-             <x>10</x>
-             <y>10</y>
-             <width>72</width>
+             <x>3</x>
+             <y>5</y>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
@@ -1489,14 +1843,23 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QPushButton" name="btn_entrar_16">
+          <widget class="QPushButton" name="btn_editar_16">
            <property name="enabled">
             <bool>false</bool>
            </property>
@@ -1508,25 +1871,39 @@ color:black;</string>
              <height>20</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
             <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
            </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
           </widget>
-          <widget class="QLabel" name="nome_conta_16">
+          <widget class="QPushButton" name="btn_entrar_16">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="geometry">
             <rect>
              <x>3</x>
              <y>5</y>
-             <width>72</width>
+             <width>78</width>
              <height>23</height>
             </rect>
            </property>
+           <property name="cursor">
+            <cursorShape>PointingHandCursor</cursorShape>
+           </property>
            <property name="styleSheet">
-            <string notr="true">font-weight: bold;
-color:black;</string>
+            <string notr="true">border-radius:1px;</string>
            </property>
            <property name="text">
             <string/>
