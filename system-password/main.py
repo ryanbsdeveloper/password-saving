@@ -1,6 +1,8 @@
 import sys
 from PyQt5.QtWidgets import QMainWindow, QApplication
 from PyQt5.QtGui import QPixmap, QIcon
+from PyQt5.QtCore import QUrl
+from PyQt5.QtWebEngineWidgets import QWebEngineView
 from windows.UI import UI_janela_inicial, UI_janela_apagar, UI_janela_sites
 from imports.BancoDeDados import BD_add_conta
 from imports.modules import ctrlC, geraCriptografia
@@ -70,6 +72,7 @@ class TelaSites(QMainWindow):
         self.ui.btn_salvar_registro.clicked.connect(self.registrar)
         self.ui.btn_voltar.clicked.connect(self.close)
 
+
         # mostrando registros na GUI
         self.db.carregar_registros()
         for v in self.db.lista_registro:
@@ -84,17 +87,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[0]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_1.clicked.connect(self.apagar_registro_1)
+                self.ui.button_deletar_registro_1.clicked.connect(
+                    self.apagar_registro_1)
 
                 # mostra na tela
-                self.ui.qual_site_1.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_1.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_1.setText(site_na_bd)
                 self.ui.text_senha_1.setText(senha_na_bd)
                 self.ui.text_email_1.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_1.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_1.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 2:
                 self.ui.registro_2.show()
@@ -107,17 +113,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[1]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_2.clicked.connect(self.apagar_registro_2)
+                self.ui.button_deletar_registro_2.clicked.connect(
+                    self.apagar_registro_2)
 
                 # mostra na tela
-                self.ui.qual_site_2.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_2.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_2.setText(site_na_bd)
                 self.ui.text_senha_2.setText(senha_na_bd)
                 self.ui.text_email_2.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_2.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_2.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 3:
                 self.ui.registro_3.show()
@@ -130,17 +139,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[2]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_3.clicked.connect(self.apagar_registro_3)
+                self.ui.button_deletar_registro_3.clicked.connect(
+                    self.apagar_registro_3)
 
                 # mostra na tela
-                self.ui.qual_site_3.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_3.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_3.setText(site_na_bd)
                 self.ui.text_senha_3.setText(senha_na_bd)
                 self.ui.text_email_3.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_3.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_3.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 4:
                 self.ui.registro_4.show()
@@ -153,17 +165,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[3]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_4.clicked.connect(self.apagar_registro_4)
+                self.ui.button_deletar_registro_4.clicked.connect(
+                    self.apagar_registro_4)
 
                 # mostra na tela
-                self.ui.qual_site_4.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_4.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_4.setText(site_na_bd)
                 self.ui.text_senha_4.setText(senha_na_bd)
                 self.ui.text_email_4.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_4.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_4.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 5:
                 self.ui.registro_5.show()
@@ -176,17 +191,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[4]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_5.clicked.connect(self.apagar_registro_5)
+                self.ui.button_deletar_registro_5.clicked.connect(
+                    self.apagar_registro_5)
 
                 # mostra na tela
-                self.ui.qual_site_5.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_5.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_5.setText(site_na_bd)
                 self.ui.text_senha_5.setText(senha_na_bd)
                 self.ui.text_email_5.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_5.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_5.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 6:
                 self.ui.registro_6.show()
@@ -199,17 +217,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[5]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_6.clicked.connect(self.apagar_registro_6)
+                self.ui.button_deletar_registro_6.clicked.connect(
+                    self.apagar_registro_6)
 
                 # mostra na tela
-                self.ui.qual_site_6.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_6.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_6.setText(site_na_bd)
                 self.ui.text_senha_6.setText(senha_na_bd)
                 self.ui.text_email_6.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_6.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_6.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 7:
                 self.ui.registro_7.show()
@@ -222,16 +243,19 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[6]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_7.clicked.connect(self.apagar_registro_7)
+                self.ui.button_deletar_registro_7.clicked.connect(
+                    self.apagar_registro_7)
 
                 # mostra na tela
-                self.ui.qual_site_7.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_7.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
                 self.ui.text_site_7.setText(site_na_bd)
                 self.ui.text_senha_7.setText(senha_na_bd)
                 self.ui.text_email_7.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_7.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_7.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 8:
                 self.ui.registro_8.show()
@@ -244,17 +268,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[7]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_8.clicked.connect(self.apagar_registro_8)
+                self.ui.button_deletar_registro_8.clicked.connect(
+                    self.apagar_registro_8)
 
                 # mostra na tela
-                self.ui.qual_site_8.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_8.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_8.setText(site_na_bd)
                 self.ui.text_senha_8.setText(senha_na_bd)
                 self.ui.text_email_8.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_8.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_8.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 9:
                 self.ui.registro_9.show()
@@ -267,17 +294,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[8]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_9.clicked.connect(self.apagar_registro_9)
+                self.ui.button_deletar_registro_9.clicked.connect(
+                    self.apagar_registro_9)
 
                 # mostra na tela
-                self.ui.qual_site_9.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_9.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_9.setText(site_na_bd)
                 self.ui.text_senha_9.setText(senha_na_bd)
                 self.ui.text_email_9.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_9.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_9.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 10:
                 self.ui.registro_10.show()
@@ -290,17 +320,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[9]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_10.clicked.connect(self.apagar_registro_10)
+                self.ui.button_deletar_registro_10.clicked.connect(
+                    self.apagar_registro_10)
 
                 # mostra na tela
-                self.ui.qual_site_10.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_10.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_10.setText(site_na_bd)
                 self.ui.text_senha_10.setText(senha_na_bd)
                 self.ui.text_email_10.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_10.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_10.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 11:
                 self.ui.registro_11.show()
@@ -313,17 +346,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[10]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_11.clicked.connect(self.apagar_registro_11)
+                self.ui.button_deletar_registro_11.clicked.connect(
+                    self.apagar_registro_11)
 
                 # mostra na tela
-                self.ui.qual_site_11.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_11.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_11.setText(site_na_bd)
                 self.ui.text_senha_11.setText(senha_na_bd)
                 self.ui.text_email_11.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_11.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_11.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 12:
                 self.ui.registro_12.show()
@@ -336,17 +372,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[11]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_12.clicked.connect(self.apagar_registro_12)
+                self.ui.button_deletar_registro_12.clicked.connect(
+                    self.apagar_registro_12)
 
                 # mostra na tela
-                self.ui.qual_site_12.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_12.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_12.setText(site_na_bd)
                 self.ui.text_senha_12.setText(senha_na_bd)
                 self.ui.text_email_12.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_12.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_12.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 13:
                 self.ui.registro_13.show()
@@ -359,17 +398,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[12]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_13.clicked.connect(self.apagar_registro_13)
+                self.ui.button_deletar_registro_13.clicked.connect(
+                    self.apagar_registro_13)
 
                 # mostra na tela
-                self.ui.qual_site_13.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_13.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_13.setText(site_na_bd)
                 self.ui.text_senha_13.setText(senha_na_bd)
                 self.ui.text_email_13.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_13.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_13.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 14:
                 self.ui.registro_14.show()
@@ -382,17 +424,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[13]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_14.clicked.connect(self.apagar_registro_14)
+                self.ui.button_deletar_registro_14.clicked.connect(
+                    self.apagar_registro_14)
 
                 # mostra na tela
-                self.ui.qual_site_14.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_14.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_14.setText(site_na_bd)
                 self.ui.text_senha_14.setText(senha_na_bd)
                 self.ui.text_email_14.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_14.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_14.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 15:
                 self.ui.registro_15.show()
@@ -405,17 +450,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[14]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_15.clicked.connect(self.apagar_registro_15)
+                self.ui.button_deletar_registro_15.clicked.connect(
+                    self.apagar_registro_15)
 
                 # mostra na tela
-                self.ui.qual_site_15.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_15.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_15.setText(site_na_bd)
                 self.ui.text_senha_15.setText(senha_na_bd)
                 self.ui.text_email_15.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_15.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_15.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 16:
                 self.ui.registro_16.show()
@@ -428,17 +476,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[15]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_16.clicked.connect(self.apagar_registro_16)
+                self.ui.button_deletar_registro_16.clicked.connect(
+                    self.apagar_registro_16)
 
                 # mostra na tela
-                self.ui.qual_site_16.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_16.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_16.setText(site_na_bd)
                 self.ui.text_senha_16.setText(senha_na_bd)
                 self.ui.text_email_16.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_16.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_16.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 17:
                 self.ui.registro_17.show()
@@ -451,17 +502,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[16]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_17.clicked.connect(self.apagar_registro_17)
+                self.ui.button_deletar_registro_17.clicked.connect(
+                    self.apagar_registro_17)
 
                 # mostra na tela
-                self.ui.qual_site_17.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_17.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_17.setText(site_na_bd)
                 self.ui.text_senha_17.setText(senha_na_bd)
                 self.ui.text_email_17.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_17.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_17.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 18:
                 self.ui.registro_18.show()
@@ -474,17 +528,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[17]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_18.clicked.connect(self.apagar_registro_18)
+                self.ui.button_deletar_registro_18.clicked.connect(
+                    self.apagar_registro_18)
 
                 # mostra na tela
-                self.ui.qual_site_18.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_18.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_18.setText(site_na_bd)
                 self.ui.text_senha_18.setText(senha_na_bd)
                 self.ui.text_email_18.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_18.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_18.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 19:
                 self.ui.registro_19.show()
@@ -497,17 +554,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[18]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_19.clicked.connect(self.apagar_registro_19)
+                self.ui.button_deletar_registro_19.clicked.connect(
+                    self.apagar_registro_19)
 
                 # mostra na tela
-                self.ui.qual_site_19.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_19.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_19.setText(site_na_bd)
                 self.ui.text_senha_19.setText(senha_na_bd)
                 self.ui.text_email_19.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_19.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_19.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             elif self.cont == 20:
                 self.ui.registro_20.show()
@@ -520,17 +580,20 @@ class TelaSites(QMainWindow):
                 email_na_bd = self.db.lista_registro[19]['email']
 
                 # excluindo registro
-                self.ui.button_deletar_registro_20.clicked.connect(self.apagar_registro_20)
+                self.ui.button_deletar_registro_20.clicked.connect(
+                    self.apagar_registro_20)
 
                 # mostra na tela
-                self.ui.qual_site_20.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                self.ui.qual_site_20.setPixmap(
+                    QPixmap(self.set_icon(site_na_bd)))
 
                 self.ui.text_site_20.setText(site_na_bd)
                 self.ui.text_senha_20.setText(senha_na_bd)
                 self.ui.text_email_20.setText(email_na_bd)
 
                 # botao copiar
-                self.ui.button_copiar_site_20.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                self.ui.button_copiar_site_20.clicked.connect(
+                    lambda: ctrlC.CtrlC(senha_na_bd))
 
             self.cont += 1
 
@@ -542,9 +605,10 @@ class TelaSites(QMainWindow):
         if site == '' and senha == '':
             self.ui.input.show()
             # estilo
-            self.ui.input.setStyleSheet('color: rgb(255, 88, 88);border-radius:15px;background-color: rgb(34, 34, 34);')
+            self.ui.input.setStyleSheet(
+                'color: rgb(255, 88, 88);border-radius:15px;background-color: rgb(34, 34, 34);')
 
-            self.ui.input_texto.setText('Site e senha invalídos!')
+            self.ui.input_texto.setText('Site e senha inválidos!')
             self.ui.verifica_site.setPixmap(QPixmap('img\\erro.png'))
             self.ui.verifica_senha.setPixmap(QPixmap('img\\erro.png'))
 
@@ -583,7 +647,6 @@ class TelaSites(QMainWindow):
                                               "    color: rgb(255, 255, 255);\n"
                                               "}")
 
-
         elif site == '':
             self.ui.input_senha.setStyleSheet("QLineEdit{\n"
                                               "    color: white;\n"
@@ -604,7 +667,8 @@ class TelaSites(QMainWindow):
                                               "}")
 
             # estilo
-            self.ui.input.setStyleSheet('color:rgb(255, 88, 88);border-radius:15px;background-color: rgb(34, 34, 34);')
+            self.ui.input.setStyleSheet(
+                'color:rgb(255, 88, 88);border-radius:15px;background-color: rgb(34, 34, 34);')
             self.ui.input_site.setStyleSheet("QLineEdit{\n"
                                              "    color: white;\n"
                                              "    background-color:rgb(31, 31, 31);\n"
@@ -624,7 +688,7 @@ class TelaSites(QMainWindow):
                                              "}")
 
             self.ui.input.show()
-            self.ui.input_texto.setText('Site invalído!')
+            self.ui.input_texto.setText('Site invalido!')
             self.ui.verifica_site.setPixmap(QPixmap('img\\erro.png'))
 
         elif senha == '':
@@ -648,7 +712,8 @@ class TelaSites(QMainWindow):
             self.ui.verifica_site.setPixmap(QPixmap('img\\valido.png'))
 
             # estilo
-            self.ui.input.setStyleSheet('color: rgb(255, 88, 88);border-radius:15px;background-color: rgb(34, 34, 34);')
+            self.ui.input.setStyleSheet(
+                'color: rgb(255, 88, 88);border-radius:15px;background-color: rgb(34, 34, 34);')
             self.ui.input_senha.setStyleSheet("QLineEdit{\n"
                                               "    color: white;\n"
                                               "    background-color:rgb(31, 31, 31);\n"
@@ -847,7 +912,8 @@ class TelaSites(QMainWindow):
                                                      "    color: rgb(255, 255, 255);\n"
                                                      "}")
 
-                    self.ui.verifica_email.setPixmap(QPixmap('img\\valido.png'))
+                    self.ui.verifica_email.setPixmap(
+                        QPixmap('img\\valido.png'))
 
                     if self.cont == 1:
                         self.ui.registro_1.show()
@@ -857,7 +923,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_1.clicked.connect(self.apagar_registro_1)
+                        self.ui.button_deletar_registro_1.clicked.connect(
+                            self.apagar_registro_1)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -865,14 +932,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[0]['senha']
                         email_na_bd = self.db.lista_registro[0]['email']
 
-                        self.ui.qual_site_1.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_1.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_1.setText(site_na_bd)
                         self.ui.text_senha_1.setText(senha_na_bd)
                         self.ui.text_email_1.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_1.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_1.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 2:
                         self.ui.registro_2.show()
@@ -882,7 +951,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_2.clicked.connect(self.apagar_registro_2)
+                        self.ui.button_deletar_registro_2.clicked.connect(
+                            self.apagar_registro_2)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -890,14 +960,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[1]['senha']
                         email_na_bd = self.db.lista_registro[1]['email']
 
-                        self.ui.qual_site_2.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_2.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_2.setText(site_na_bd)
                         self.ui.text_senha_2.setText(senha_na_bd)
                         self.ui.text_email_2.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_2.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_2.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 3:
                         self.ui.registro_3.show()
@@ -907,7 +979,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_3.clicked.connect(self.apagar_registro_3)
+                        self.ui.button_deletar_registro_3.clicked.connect(
+                            self.apagar_registro_3)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -915,14 +988,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[2]['senha']
                         email_na_bd = self.db.lista_registro[2]['email']
 
-                        self.ui.qual_site_3.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_3.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_3.setText(site_na_bd)
                         self.ui.text_senha_3.setText(senha_na_bd)
                         self.ui.text_email_3.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_3.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_3.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 4:
                         self.ui.registro_4.show()
@@ -932,7 +1007,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_4.clicked.connect(self.apagar_registro_4)
+                        self.ui.button_deletar_registro_4.clicked.connect(
+                            self.apagar_registro_4)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -940,14 +1016,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[3]['senha']
                         email_na_bd = self.db.lista_registro[3]['email']
 
-                        self.ui.qual_site_4.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_4.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_4.setText(site_na_bd)
                         self.ui.text_senha_4.setText(senha_na_bd)
                         self.ui.text_email_4.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_4.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_4.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 5:
                         self.ui.registro_5.show()
@@ -957,7 +1035,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_5.clicked.connect(self.apagar_registro_5)
+                        self.ui.button_deletar_registro_5.clicked.connect(
+                            self.apagar_registro_5)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -965,14 +1044,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[4]['senha']
                         email_na_bd = self.db.lista_registro[4]['email']
 
-                        self.ui.qual_site_5.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_5.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_5.setText(site_na_bd)
                         self.ui.text_senha_5.setText(senha_na_bd)
                         self.ui.text_email_5.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_5.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_5.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 6:
                         self.ui.registro_6.show()
@@ -982,7 +1063,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_6.clicked.connect(self.apagar_registro_6)
+                        self.ui.button_deletar_registro_6.clicked.connect(
+                            self.apagar_registro_6)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -990,14 +1072,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[5]['senha']
                         email_na_bd = self.db.lista_registro[5]['email']
 
-                        self.ui.qual_site_6.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_6.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_6.setText(site_na_bd)
                         self.ui.text_senha_6.setText(senha_na_bd)
                         self.ui.text_email_6.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_6.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_6.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 7:
                         self.ui.registro_7.show()
@@ -1007,7 +1091,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_7.clicked.connect(self.apagar_registro_7)
+                        self.ui.button_deletar_registro_7.clicked.connect(
+                            self.apagar_registro_7)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1015,14 +1100,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[6]['senha']
                         email_na_bd = self.db.lista_registro[6]['email']
 
-                        self.ui.qual_site_7.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_7.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_7.setText(site_na_bd)
                         self.ui.text_senha_7.setText(senha_na_bd)
                         self.ui.text_email_7.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_7.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_7.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 8:
                         self.ui.registro_8.show()
@@ -1032,7 +1119,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_8.clicked.connect(self.apagar_registro_8)
+                        self.ui.button_deletar_registro_8.clicked.connect(
+                            self.apagar_registro_8)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1040,14 +1128,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[7]['senha']
                         email_na_bd = self.db.lista_registro[7]['email']
 
-                        self.ui.qual_site_8.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_8.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_8.setText(site_na_bd)
                         self.ui.text_senha_8.setText(senha_na_bd)
                         self.ui.text_email_8.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_8.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_8.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 9:
                         self.ui.registro_9.show()
@@ -1057,7 +1147,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_9.clicked.connect(self.apagar_registro_9)
+                        self.ui.button_deletar_registro_9.clicked.connect(
+                            self.apagar_registro_9)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1065,14 +1156,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[8]['senha']
                         email_na_bd = self.db.lista_registro[8]['email']
 
-                        self.ui.qual_site_9.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_9.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_9.setText(site_na_bd)
                         self.ui.text_senha_9.setText(senha_na_bd)
                         self.ui.text_email_9.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_9.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_9.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 10:
                         self.ui.registro_10.show()
@@ -1082,7 +1175,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_10.clicked.connect(self.apagar_registro_10)
+                        self.ui.button_deletar_registro_10.clicked.connect(
+                            self.apagar_registro_10)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1090,14 +1184,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[9]['senha']
                         email_na_bd = self.db.lista_registro[9]['email']
 
-                        self.ui.qual_site_10.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_10.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_10.setText(site_na_bd)
                         self.ui.text_senha_10.setText(senha_na_bd)
                         self.ui.text_email_10.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_10.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_10.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 11:
                         self.ui.registro_11.show()
@@ -1107,7 +1203,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_11.clicked.connect(self.apagar_registro_11)
+                        self.ui.button_deletar_registro_11.clicked.connect(
+                            self.apagar_registro_11)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1115,14 +1212,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[10]['senha']
                         email_na_bd = self.db.lista_registro[10]['email']
 
-                        self.ui.qual_site_11.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_11.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_11.setText(site_na_bd)
                         self.ui.text_senha_11.setText(senha_na_bd)
                         self.ui.text_email_11.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_11.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_11.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 12:
                         self.ui.registro_12.show()
@@ -1132,7 +1231,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_12.clicked.connect(self.apagar_registro_12)
+                        self.ui.button_deletar_registro_12.clicked.connect(
+                            self.apagar_registro_12)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1140,14 +1240,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[11]['senha']
                         email_na_bd = self.db.lista_registro[11]['email']
 
-                        self.ui.qual_site_12.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_12.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_12.setText(site_na_bd)
                         self.ui.text_senha_12.setText(senha_na_bd)
                         self.ui.text_email_12.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_12.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_12.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 13:
                         self.ui.registro_13.show()
@@ -1157,7 +1259,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_13.clicked.connect(self.apagar_registro_13)
+                        self.ui.button_deletar_registro_13.clicked.connect(
+                            self.apagar_registro_13)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1165,14 +1268,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[12]['senha']
                         email_na_bd = self.db.lista_registro[12]['email']
 
-                        self.ui.qual_site_13.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_13.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_13.setText(site_na_bd)
                         self.ui.text_senha_13.setText(senha_na_bd)
                         self.ui.text_email_13.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_13.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_13.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 14:
                         self.ui.registro_14.show()
@@ -1182,7 +1287,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_14.clicked.connect(self.apagar_registro_14)
+                        self.ui.button_deletar_registro_14.clicked.connect(
+                            self.apagar_registro_14)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1190,14 +1296,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[13]['senha']
                         email_na_bd = self.db.lista_registro[13]['email']
 
-                        self.ui.qual_site_14.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_14.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_14.setText(site_na_bd)
                         self.ui.text_senha_14.setText(senha_na_bd)
                         self.ui.text_email_14.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_14.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_14.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 15:
                         self.ui.registro_15.show()
@@ -1207,7 +1315,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_15.clicked.connect(self.apagar_registro_15)
+                        self.ui.button_deletar_registro_15.clicked.connect(
+                            self.apagar_registro_15)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1215,14 +1324,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[14]['senha']
                         email_na_bd = self.db.lista_registro[14]['email']
 
-                        self.ui.qual_site_15.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_15.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_15.setText(site_na_bd)
                         self.ui.text_senha_15.setText(senha_na_bd)
                         self.ui.text_email_15.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_15.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_15.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 16:
                         self.ui.registro_16.show()
@@ -1232,7 +1343,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_16.clicked.connect(self.apagar_registro_16)
+                        self.ui.button_deletar_registro_16.clicked.connect(
+                            self.apagar_registro_16)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1240,14 +1352,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[15]['senha']
                         email_na_bd = self.db.lista_registro[15]['email']
 
-                        self.ui.qual_site_16.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_16.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_16.setText(site_na_bd)
                         self.ui.text_senha_16.setText(senha_na_bd)
                         self.ui.text_email_16.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_16.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_16.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 17:
                         self.ui.registro_17.show()
@@ -1257,7 +1371,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_17.clicked.connect(self.apagar_registro_17)
+                        self.ui.button_deletar_registro_17.clicked.connect(
+                            self.apagar_registro_17)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1265,14 +1380,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[16]['senha']
                         email_na_bd = self.db.lista_registro[16]['email']
 
-                        self.ui.qual_site_17.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_17.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_17.setText(site_na_bd)
                         self.ui.text_senha_17.setText(senha_na_bd)
                         self.ui.text_email_17.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_17.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_17.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 18:
                         self.ui.registro_18.show()
@@ -1282,7 +1399,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_18.clicked.connect(self.apagar_registro_18)
+                        self.ui.button_deletar_registro_18.clicked.connect(
+                            self.apagar_registro_18)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1290,14 +1408,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[17]['senha']
                         email_na_bd = self.db.lista_registro[17]['email']
 
-                        self.ui.qual_site_18.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_18.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_18.setText(site_na_bd)
                         self.ui.text_senha_18.setText(senha_na_bd)
                         self.ui.text_email_18.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_18.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_18.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 19:
                         self.ui.registro_19.show()
@@ -1307,7 +1427,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_19.clicked.connect(self.apagar_registro_19)
+                        self.ui.button_deletar_registro_19.clicked.connect(
+                            self.apagar_registro_19)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1315,14 +1436,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[18]['senha']
                         email_na_bd = self.db.lista_registro[18]['email']
 
-                        self.ui.qual_site_19.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_19.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_19.setText(site_na_bd)
                         self.ui.text_senha_19.setText(senha_na_bd)
                         self.ui.text_email_19.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_19.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_19.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     elif self.cont == 20:
                         self.ui.registro_20.show()
@@ -1332,7 +1455,8 @@ class TelaSites(QMainWindow):
                         self.db.inserir_registro(site, senha, email)
 
                         # excluindo registro
-                        self.ui.button_deletar_registro_20.clicked.connect(self.apagar_registro_20)
+                        self.ui.button_deletar_registro_20.clicked.connect(
+                            self.apagar_registro_20)
 
                         # mostra na tela
                         self.db.carregar_registros()
@@ -1340,14 +1464,16 @@ class TelaSites(QMainWindow):
                         senha_na_bd = self.db.lista_registro[19]['senha']
                         email_na_bd = self.db.lista_registro[19]['email']
 
-                        self.ui.qual_site_20.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                        self.ui.qual_site_20.setPixmap(
+                            QPixmap(self.set_icon(site_na_bd)))
 
                         self.ui.text_site_20.setText(site_na_bd)
                         self.ui.text_senha_20.setText(senha_na_bd)
                         self.ui.text_email_20.setText(email_na_bd)
 
                         # botao copiar
-                        self.ui.button_copiar_site_20.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                        self.ui.button_copiar_site_20.clicked.connect(
+                            lambda: ctrlC.CtrlC(senha_na_bd))
 
                     else:
                         self.ui.input.show()
@@ -1427,7 +1553,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_1.clicked.connect(self.apagar_registro_1)
+                    self.ui.button_deletar_registro_1.clicked.connect(
+                        self.apagar_registro_1)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1435,14 +1562,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[0]['senha']
                     email_na_bd = self.db.lista_registro[0]['email']
 
-                    self.ui.qual_site_1.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_1.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_1.setText(site_na_bd)
                     self.ui.text_senha_1.setText(senha_na_bd)
                     self.ui.text_email_1.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_1.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_1.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 2:
                     self.ui.registro_2.show()
@@ -1452,7 +1581,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_2.clicked.connect(self.apagar_registro_2)
+                    self.ui.button_deletar_registro_2.clicked.connect(
+                        self.apagar_registro_2)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1460,14 +1590,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[1]['senha']
                     email_na_bd = self.db.lista_registro[1]['email']
 
-                    self.ui.qual_site_2.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_2.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_2.setText(site_na_bd)
                     self.ui.text_senha_2.setText(senha_na_bd)
                     self.ui.text_email_2.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_2.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_2.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 3:
                     self.ui.registro_3.show()
@@ -1477,7 +1609,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_3.clicked.connect(self.apagar_registro_3)
+                    self.ui.button_deletar_registro_3.clicked.connect(
+                        self.apagar_registro_3)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1485,14 +1618,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[2]['senha']
                     email_na_bd = self.db.lista_registro[2]['email']
 
-                    self.ui.qual_site_3.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_3.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_3.setText(site_na_bd)
                     self.ui.text_senha_3.setText(senha_na_bd)
                     self.ui.text_email_3.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_3.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_3.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 4:
                     self.ui.registro_4.show()
@@ -1502,7 +1637,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_4.clicked.connect(self.apagar_registro_4)
+                    self.ui.button_deletar_registro_4.clicked.connect(
+                        self.apagar_registro_4)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1510,14 +1646,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[3]['senha']
                     email_na_bd = self.db.lista_registro[3]['email']
 
-                    self.ui.qual_site_4.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_4.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_4.setText(site_na_bd)
                     self.ui.text_senha_4.setText(senha_na_bd)
                     self.ui.text_email_4.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_4.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_4.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 5:
                     self.ui.registro_5.show()
@@ -1527,7 +1665,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_5.clicked.connect(self.apagar_registro_5)
+                    self.ui.button_deletar_registro_5.clicked.connect(
+                        self.apagar_registro_5)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1535,14 +1674,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[4]['senha']
                     email_na_bd = self.db.lista_registro[4]['email']
 
-                    self.ui.qual_site_5.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_5.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_5.setText(site_na_bd)
                     self.ui.text_senha_5.setText(senha_na_bd)
                     self.ui.text_email_5.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_5.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_5.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 6:
                     self.ui.registro_6.show()
@@ -1552,7 +1693,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_6.clicked.connect(self.apagar_registro_6)
+                    self.ui.button_deletar_registro_6.clicked.connect(
+                        self.apagar_registro_6)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1560,14 +1702,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[5]['senha']
                     email_na_bd = self.db.lista_registro[5]['email']
 
-                    self.ui.qual_site_6.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_6.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_6.setText(site_na_bd)
                     self.ui.text_senha_6.setText(senha_na_bd)
                     self.ui.text_email_6.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_6.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_6.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 7:
                     self.ui.registro_7.show()
@@ -1577,7 +1721,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_7.clicked.connect(self.apagar_registro_7)
+                    self.ui.button_deletar_registro_7.clicked.connect(
+                        self.apagar_registro_7)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1585,14 +1730,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[6]['senha']
                     email_na_bd = self.db.lista_registro[6]['email']
 
-                    self.ui.qual_site_7.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_7.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_7.setText(site_na_bd)
                     self.ui.text_senha_7.setText(senha_na_bd)
                     self.ui.text_email_7.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_7.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_7.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 8:
                     self.ui.registro_8.show()
@@ -1602,7 +1749,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_8.clicked.connect(self.apagar_registro_8)
+                    self.ui.button_deletar_registro_8.clicked.connect(
+                        self.apagar_registro_8)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1610,14 +1758,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[7]['senha']
                     email_na_bd = self.db.lista_registro[7]['email']
 
-                    self.ui.qual_site_8.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_8.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_8.setText(site_na_bd)
                     self.ui.text_senha_8.setText(senha_na_bd)
                     self.ui.text_email_8.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_8.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_8.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 9:
                     self.ui.registro_9.show()
@@ -1627,7 +1777,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_9.clicked.connect(self.apagar_registro_9)
+                    self.ui.button_deletar_registro_9.clicked.connect(
+                        self.apagar_registro_9)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1635,14 +1786,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[8]['senha']
                     email_na_bd = self.db.lista_registro[8]['email']
 
-                    self.ui.qual_site_9.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_9.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_9.setText(site_na_bd)
                     self.ui.text_senha_9.setText(senha_na_bd)
                     self.ui.text_email_9.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_9.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_9.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 10:
                     self.ui.registro_10.show()
@@ -1652,7 +1805,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_10.clicked.connect(self.apagar_registro_10)
+                    self.ui.button_deletar_registro_10.clicked.connect(
+                        self.apagar_registro_10)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1660,14 +1814,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[9]['senha']
                     email_na_bd = self.db.lista_registro[9]['email']
 
-                    self.ui.qual_site_10.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_10.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_10.setText(site_na_bd)
                     self.ui.text_senha_10.setText(senha_na_bd)
                     self.ui.text_email_10.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_10.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_10.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 11:
                     self.ui.registro_11.show()
@@ -1677,7 +1833,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_11.clicked.connect(self.apagar_registro_11)
+                    self.ui.button_deletar_registro_11.clicked.connect(
+                        self.apagar_registro_11)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1685,14 +1842,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[10]['senha']
                     email_na_bd = self.db.lista_registro[10]['email']
 
-                    self.ui.qual_site_11.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_11.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_11.setText(site_na_bd)
                     self.ui.text_senha_11.setText(senha_na_bd)
                     self.ui.text_email_11.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_11.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_11.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 12:
                     self.ui.registro_12.show()
@@ -1702,7 +1861,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_12.clicked.connect(self.apagar_registro_12)
+                    self.ui.button_deletar_registro_12.clicked.connect(
+                        self.apagar_registro_12)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1710,14 +1870,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[11]['senha']
                     email_na_bd = self.db.lista_registro[11]['email']
 
-                    self.ui.qual_site_12.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_12.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_12.setText(site_na_bd)
                     self.ui.text_senha_12.setText(senha_na_bd)
                     self.ui.text_email_12.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_12.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_12.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 13:
                     self.ui.registro_13.show()
@@ -1727,7 +1889,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_13.clicked.connect(self.apagar_registro_13)
+                    self.ui.button_deletar_registro_13.clicked.connect(
+                        self.apagar_registro_13)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1735,14 +1898,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[12]['senha']
                     email_na_bd = self.db.lista_registro[12]['email']
 
-                    self.ui.qual_site_13.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_13.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_13.setText(site_na_bd)
                     self.ui.text_senha_13.setText(senha_na_bd)
                     self.ui.text_email_13.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_13.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_13.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 14:
                     self.ui.registro_14.show()
@@ -1752,7 +1917,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_14.clicked.connect(self.apagar_registro_14)
+                    self.ui.button_deletar_registro_14.clicked.connect(
+                        self.apagar_registro_14)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1760,14 +1926,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[13]['senha']
                     email_na_bd = self.db.lista_registro[13]['email']
 
-                    self.ui.qual_site_14.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_14.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_14.setText(site_na_bd)
                     self.ui.text_senha_14.setText(senha_na_bd)
                     self.ui.text_email_14.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_14.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_14.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 15:
                     self.ui.registro_15.show()
@@ -1777,7 +1945,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_15.clicked.connect(self.apagar_registro_15)
+                    self.ui.button_deletar_registro_15.clicked.connect(
+                        self.apagar_registro_15)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1785,14 +1954,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[14]['senha']
                     email_na_bd = self.db.lista_registro[14]['email']
 
-                    self.ui.qual_site_15.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_15.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_15.setText(site_na_bd)
                     self.ui.text_senha_15.setText(senha_na_bd)
                     self.ui.text_email_15.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_15.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_15.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 16:
                     self.ui.registro_16.show()
@@ -1802,7 +1973,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_16.clicked.connect(self.apagar_registro_16)
+                    self.ui.button_deletar_registro_16.clicked.connect(
+                        self.apagar_registro_16)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1810,14 +1982,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[15]['senha']
                     email_na_bd = self.db.lista_registro[15]['email']
 
-                    self.ui.qual_site_16.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_16.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_16.setText(site_na_bd)
                     self.ui.text_senha_16.setText(senha_na_bd)
                     self.ui.text_email_16.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_16.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_16.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 17:
                     self.ui.registro_17.show()
@@ -1827,7 +2001,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_17.clicked.connect(self.apagar_registro_17)
+                    self.ui.button_deletar_registro_17.clicked.connect(
+                        self.apagar_registro_17)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1835,14 +2010,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[16]['senha']
                     email_na_bd = self.db.lista_registro[16]['email']
 
-                    self.ui.qual_site_17.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_17.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_17.setText(site_na_bd)
                     self.ui.text_senha_17.setText(senha_na_bd)
                     self.ui.text_email_17.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_17.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_17.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 18:
                     self.ui.registro_18.show()
@@ -1852,7 +2029,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_18.clicked.connect(self.apagar_registro_18)
+                    self.ui.button_deletar_registro_18.clicked.connect(
+                        self.apagar_registro_18)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1860,14 +2038,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[17]['senha']
                     email_na_bd = self.db.lista_registro[17]['email']
 
-                    self.ui.qual_site_18.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_18.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_18.setText(site_na_bd)
                     self.ui.text_senha_18.setText(senha_na_bd)
                     self.ui.text_email_18.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_18.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_18.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 19:
                     self.ui.registro_19.show()
@@ -1877,7 +2057,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_19.clicked.connect(self.apagar_registro_19)
+                    self.ui.button_deletar_registro_19.clicked.connect(
+                        self.apagar_registro_19)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1885,14 +2066,16 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[18]['senha']
                     email_na_bd = self.db.lista_registro[18]['email']
 
-                    self.ui.qual_site_19.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_19.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_19.setText(site_na_bd)
                     self.ui.text_senha_19.setText(senha_na_bd)
                     self.ui.text_email_19.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_19.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_19.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
 
                 elif self.cont == 20:
                     self.ui.registro_20.show()
@@ -1902,7 +2085,8 @@ class TelaSites(QMainWindow):
                     self.db.inserir_registro(site, senha, email)
 
                     # excluindo registro
-                    self.ui.button_deletar_registro_20.clicked.connect(self.apagar_registro_20)
+                    self.ui.button_deletar_registro_20.clicked.connect(
+                        self.apagar_registro_20)
 
                     # mostra na tela
                     self.db.carregar_registros()
@@ -1910,18 +2094,21 @@ class TelaSites(QMainWindow):
                     senha_na_bd = self.db.lista_registro[19]['senha']
                     email_na_bd = self.db.lista_registro[19]['email']
 
-                    self.ui.qual_site_20.setPixmap(QPixmap(self.set_icon(site_na_bd)))
+                    self.ui.qual_site_20.setPixmap(
+                        QPixmap(self.set_icon(site_na_bd)))
 
                     self.ui.text_site_20.setText(site_na_bd)
                     self.ui.text_senha_20.setText(senha_na_bd)
                     self.ui.text_email_20.setText(email_na_bd)
 
                     # botao copiar
-                    self.ui.button_copiar_site_20.clicked.connect(lambda: ctrlC.CtrlC(senha_na_bd))
+                    self.ui.button_copiar_site_20.clicked.connect(
+                        lambda: ctrlC.CtrlC(senha_na_bd))
                 else:
                     self.ui.input.show()
                     self.ui.input_texto.setStyleSheet('color:red;')
-                    self.ui.input_texto.setText('Limite alcançado, exclua um e reinicie o app')
+                    self.ui.input_texto.setText(
+                        'Limite alcançado, exclua um e reinicie o app')
 
                 self.cont += 1
 
@@ -2245,6 +2432,7 @@ class TelaSites(QMainWindow):
             return 'img\\site.png'
 
 
+
 class TelaApagar(QMainWindow):
     def __init__(self):
         super(TelaApagar, self).__init__()
@@ -2265,6 +2453,18 @@ class TelaInicial(QMainWindow):
         self.tela_apagar = TelaApagar()
         self.conta = 0
         self.cont = 1
+        self.ui.botao_saida.clicked.connect(self.ui.input.close)
+
+
+        '''INFO DEV'''
+        self.web = QWebEngineView()
+        self.web.setWindowTitle(' ')
+        self.web.setWindowIcon(QIcon('img/nav.ico'))
+
+        self.ui.info_btn_git.clicked.connect(self.github)
+        self.ui.info_btn_insta.clicked.connect(self.whatsapp)
+        self.ui.info_btn_linkedin.clicked.connect(self.linkedin)
+        self.ui.info_btn_twitter.clicked.connect(self.twitter)
 
         # avatar atual
         self.avatar_selecionado = 'img\\menino.png'
@@ -2279,10 +2479,14 @@ class TelaInicial(QMainWindow):
         self.ui.avatar_6.clicked.connect(self.avatar6)
 
         # add imagens
-        self.ui.img_contas.setPixmap(QPixmap('img\\contas.png'))
-        self.ui.img_criar.setPixmap(QPixmap('img\\criar_menu.png'))
-        self.ui.avatar_1.setIcon(QIcon('img\\menino_32x32.png'))
-        self.ui.avatar_2.setIcon(QIcon('img\\jason_32x32.png'))
+        self.ui.info_btn_git.setIcon(QIcon('img/info_github.png'))
+        self.ui.info_btn_insta.setIcon(QIcon('img/info_instagram.png'))
+        self.ui.info_btn_linkedin.setIcon(QIcon('img/info_linkedin.png'))
+        self.ui.info_btn_twitter.setIcon(QIcon('img/info_twitter.png'))
+        self.ui.img_contas.setPixmap(QPixmap('./img/contas.png'))
+        self.ui.img_criar.setPixmap(QPixmap('img/criar_menu.png'))
+        self.ui.avatar_1.setIcon(QIcon('img/menino_32x32.png'))
+        self.ui.avatar_2.setIcon(QIcon('img/jason_32x32.png'))
         self.ui.avatar_3.setIcon(QIcon('img\\menina_32x32.png'))
         self.ui.avatar_4.setIcon(QIcon('img\\alerquina_32x32.png'))
         self.ui.avatar_5.setIcon(QIcon('img\\adulto_32x32.png'))
@@ -2291,7 +2495,7 @@ class TelaInicial(QMainWindow):
         self.ui.botao_saida.setIcon(QIcon('img\\x.png'))
         self.ui.img_gera_senha.setPixmap(QPixmap('img\\img_senha.png'))
         self.ui.btn_copiar.setIcon(QIcon('img\\copiar.png'))
-        self.setWindowIcon(QIcon('img\\icon_login.ico'))
+        self.setWindowIcon(QIcon('img\\senha.ico'))
 
         # chamando o banco de dados
         self.db = BD_add_conta.BD()
@@ -2308,6 +2512,7 @@ class TelaInicial(QMainWindow):
 
         '''listando as contas já cadatradas no GUI'''
         for v in self.db.lista_correta:
+            self.db.carregar_contas()
             self.aid = v['id']
             nome_completo = f'{str(v["nome"]).capitalize()} {str(v["sobrenome"]).capitalize()}'
             if len(nome_completo) > 13:
@@ -2327,7 +2532,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[0]['nome']}{self.db.lista_correta[0]['sobrenome']}"
-                self.ui.botao_entrar_1.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_1.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # Apagar conta
                 self.ui.botao_apagar_1.clicked.connect(self.select_apagar1)
@@ -2344,7 +2550,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[1]['nome']}{self.db.lista_correta[1]['sobrenome']}"
-                self.ui.botao_entrar_2.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_2.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 self.db.carregar_contas()
                 avatar = self.db.lista_correta[1]['avatar']
@@ -2365,7 +2572,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[2]['nome']}{self.db.lista_correta[2]['sobrenome']}"
-                self.ui.botao_entrar_3.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_3.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2387,7 +2595,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[3]['nome']}{self.db.lista_correta[3]['sobrenome']}"
-                self.ui.botao_entrar_4.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_4.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2409,7 +2618,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[4]['nome']}{self.db.lista_correta[4]['sobrenome']}"
-                self.ui.botao_entrar_5.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_5.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2431,7 +2641,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[5]['nome']}{self.db.lista_correta[5]['sobrenome']}"
-                self.ui.botao_entrar_6.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_6.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2453,7 +2664,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[6]['nome']}{self.db.lista_correta[6]['sobrenome']}"
-                self.ui.botao_entrar_7.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_7.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2475,7 +2687,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[7]['nome']}{self.db.lista_correta[7]['sobrenome']}"
-                self.ui.botao_entrar_8.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_8.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2497,7 +2710,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[8]['nome']}{self.db.lista_correta[8]['sobrenome']}"
-                self.ui.botao_entrar_9.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_9.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2519,7 +2733,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[9]['nome']}{self.db.lista_correta[9]['sobrenome']}"
-                self.ui.botao_entrar_10.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_10.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2541,7 +2756,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[10]['nome']}{self.db.lista_correta[10]['sobrenome']}"
-                self.ui.botao_entrar_11.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_11.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2563,7 +2779,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[11]['nome']}{self.db.lista_correta[11]['sobrenome']}"
-                self.ui.botao_entrar_12.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_12.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2585,7 +2802,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[12]['nome']}{self.db.lista_correta[12]['sobrenome']}"
-                self.ui.botao_entrar_13.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_13.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2607,7 +2825,8 @@ class TelaInicial(QMainWindow):
 
                 # entrar
                 nometabela = f"{self.db.lista_correta[13]['nome']}{self.db.lista_correta[13]['sobrenome']}"
-                self.ui.botao_entrar_14.clicked.connect(lambda :self.sites(nometabela))
+                self.ui.botao_entrar_14.clicked.connect(
+                    lambda: self.sites(nometabela))
 
                 # avatar
                 self.db.carregar_contas()
@@ -2666,8 +2885,10 @@ class TelaInicial(QMainWindow):
 
         if (not nome.isalpha() or len(nome) < 2) or (not sobrenome.isalpha() or len(sobrenome) < 2):
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(255, 80, 80)};')
-            self.ui.input_saida.setStyleSheet('font: 87 10pt "Segoe UI Black";')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(255, 80, 80)};')
+            self.ui.input_saida.setStyleSheet(
+                'font: 87 10pt "Segoe UI Black";')
             self.ui.input_saida.setText('Nome ou Sobrenome invalídos!')
             self.ui.input_nome_2.setStyleSheet('''QLineEdit{
                             color: rgb(135, 135, 135);
@@ -2744,9 +2965,12 @@ class TelaInicial(QMainWindow):
                                                     "}")
 
             if self.cont >= 14:
-                self.ui.input.setStyleSheet('QFrame{background-color: rgb(255, 80, 80)};')
-                self.ui.input_saida.setStyleSheet('font: 87 7pt "Segoe UI Black";')
-                self.ui.input_saida.setText('Limite atingido! exclua alguma conta e reinicie o app.')
+                self.ui.input.setStyleSheet(
+                    'QFrame{background-color: rgb(255, 80, 80)};')
+                self.ui.input_saida.setStyleSheet(
+                    'font: 87 7pt "Segoe UI Black";')
+                self.ui.input_saida.setText(
+                    'Limite atingido! exclua alguma conta e reinicie o app.')
                 self.ui.input.show()
                 self.ui.input_nome_2.setEnabled(False)
                 self.ui.input_sobrenome_2.setEnabled(False)
@@ -2765,16 +2989,22 @@ class TelaInicial(QMainWindow):
 
                 except:
                     self.ui.input.show()
-                    self.ui.input_saida.setStyleSheet('font: 87 10pt "Segoe UI Black";')
-                    self.ui.input.setStyleSheet('QFrame{background-color: rgb(255, 250, 76)};')
-                    self.ui.input_saida.setText(f'"{nome_completo_na_bd}" Já cadastrado!')
+                    self.ui.input_saida.setStyleSheet(
+                        'font: 87 10pt "Segoe UI Black";')
+                    self.ui.input.setStyleSheet(
+                        'QFrame{background-color: rgb(255, 250, 76)};')
+                    self.ui.input_saida.setText(
+                        f'"{nome_completo_na_bd}" Já cadastrado!')
 
                 else:
                     self.ui.input.show()
                     self.db.carregar_contas()
-                    self.ui.input.setStyleSheet('QFrame{background-color: rgb(63, 255, 53)};')
-                    self.ui.input_saida.setStyleSheet('font: 87 10pt "Segoe UI Black"')
-                    self.ui.input_saida.setText('Conta cadastrada com sucesso!')
+                    self.ui.input.setStyleSheet(
+                        'QFrame{background-color: rgb(63, 255, 53)};')
+                    self.ui.input_saida.setStyleSheet(
+                        'font: 87 10pt "Segoe UI Black"')
+                    self.ui.input_saida.setText(
+                        'Conta cadastrada com sucesso!')
 
                     # adicionando conta registrada no bd / adicionando uma tabela única da conta no bd
                     nome_da_tabela = f'{str(self.ui.input_nome_2.text()).capitalize().replace(" ", "")}' \
@@ -2807,14 +3037,19 @@ class TelaInicial(QMainWindow):
 
                         # entrar
                         nometabela = f"{self.db.lista_correta[0]['nome']}{self.db.lista_correta[0]['sobrenome']}"
-                        self.ui.botao_entrar_1.clicked.connect(lambda :self.sites(nometabela))
+                        self.ui.botao_entrar_1.clicked.connect(
+                            lambda: self.sites(nometabela))
 
                         # Apagar conta
-                        self.ui.botao_apagar_1.clicked.connect(self.select_apagar1)
-                        self.ui.botao_apagar_1.clicked.connect(self.janela_pagar_1)
+                        self.ui.botao_apagar_1.clicked.connect(
+                            self.select_apagar1)
+                        self.ui.botao_apagar_1.clicked.connect(
+                            self.janela_pagar_1)
 
-                        self.ui.botao_apagar_1.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_1.setStyleSheet('background-color:#6c6c6c')
+                        self.ui.botao_apagar_1.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_1.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 2:
                         # revelando o botões das contas
@@ -2822,20 +3057,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_2.setEnabled(True)
                         self.ui.nome_da_conta_2.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[1]['nome']}{self.db.lista_correta[1]['sobrenome']}"
-                        self.ui.botao_entrar_.clicked.connect(lambda :self.sites(nometabela))
-
+                        # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[1]['avatar']
                         self.ui.botao_entrar_2.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_2.clicked.connect(self.select_apagar2)
-                        self.ui.botao_apagar_2.clicked.connect(self.janela_pagar_2)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[1]['nome']}{self.db.lista_correta[1]['sobrenome']}"
+                        self.ui.botao_entrar_2.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_2.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_2.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_2.clicked.connect(
+                            self.select_apagar2)
+                        self.ui.botao_apagar_2.clicked.connect(
+                            self.janela_pagar_2)
+
+                        self.ui.botao_apagar_2.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_2.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 3:
                         # revelando o botões das contas
@@ -2843,21 +3084,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_3.setEnabled(True)
                         self.ui.nome_da_conta_3.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[2]['nome']}{self.db.lista_correta[2]['sobrenome']}"
-                        self.ui.botao_entrar_3.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[2]['avatar']
                         self.ui.botao_entrar_3.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_3.clicked.connect(self.janela_pagar_3)
-                        self.ui.botao_apagar_3.clicked.connect(self.select_apagar3)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[2]['nome']}{self.db.lista_correta[2]['sobrenome']}"
+                        self.ui.botao_entrar_3.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_3.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_3.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_3.clicked.connect(
+                            self.janela_pagar_3)
+                        self.ui.botao_apagar_3.clicked.connect(
+                            self.select_apagar3)
+
+                        self.ui.botao_apagar_3.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_3.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 4:
                         # revelando o botões das contas
@@ -2865,21 +3111,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_4.setEnabled(True)
                         self.ui.nome_da_conta_4.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[3]['nome']}{self.db.lista_correta[3]['sobrenome']}"
-                        self.ui.botao_entrar_4.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[3]['avatar']
                         self.ui.botao_entrar_4.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_4.clicked.connect(self.select_apagar4)
-                        self.ui.botao_apagar_4.clicked.connect(self.janela_pagar_4)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[3]['nome']}{self.db.lista_correta[3]['sobrenome']}"
+                        self.ui.botao_entrar_4.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_4.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_4.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_4.clicked.connect(
+                            self.select_apagar4)
+                        self.ui.botao_apagar_4.clicked.connect(
+                            self.janela_pagar_4)
+
+                        self.ui.botao_apagar_4.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_4.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 5:
                         # revelando o botões das contas
@@ -2887,21 +3138,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_5.setEnabled(True)
                         self.ui.nome_da_conta_5.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[4]['nome']}{self.db.lista_correta[4]['sobrenome']}"
-                        self.ui.botao_entrar_5.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[4]['avatar']
                         self.ui.botao_entrar_5.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_5.clicked.connect(self.select_apagar5)
-                        self.ui.botao_apagar_5.clicked.connect(self.janela_pagar_5)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[4]['nome']}{self.db.lista_correta[4]['sobrenome']}"
+                        self.ui.botao_entrar_5.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_5.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_5.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_5.clicked.connect(
+                            self.select_apagar5)
+                        self.ui.botao_apagar_5.clicked.connect(
+                            self.janela_pagar_5)
+
+                        self.ui.botao_apagar_5.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_5.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 6:
                         # revelando o botões das contas
@@ -2909,21 +3165,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_6.setEnabled(True)
                         self.ui.nome_da_conta_6.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[5]['nome']}{self.db.lista_correta[5]['sobrenome']}"
-                        self.ui.botao_entrar_6.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[5]['avatar']
                         self.ui.botao_entrar_6.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_6.clicked.connect(self.select_apagar6)
-                        self.ui.botao_apagar_6.clicked.connect(self.janela_pagar_6)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[5]['nome']}{self.db.lista_correta[5]['sobrenome']}"
+                        self.ui.botao_entrar_6.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_6.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_6.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_6.clicked.connect(
+                            self.select_apagar6)
+                        self.ui.botao_apagar_6.clicked.connect(
+                            self.janela_pagar_6)
+
+                        self.ui.botao_apagar_6.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_6.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 7:
                         # revelando o botões das contas
@@ -2931,21 +3192,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_7.setEnabled(True)
                         self.ui.nome_da_conta_7.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[6]['nome']}{self.db.lista_correta[6]['sobrenome']}"
-                        self.ui.botao_entrar_7.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[6]['avatar']
                         self.ui.botao_entrar_7.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_7.clicked.connect(self.select_apagar7)
-                        self.ui.botao_apagar_7.clicked.connect(self.janela_pagar_7)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[6]['nome']}{self.db.lista_correta[6]['sobrenome']}"
+                        self.ui.botao_entrar_7.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_7.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_7.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_7.clicked.connect(
+                            self.select_apagar7)
+                        self.ui.botao_apagar_7.clicked.connect(
+                            self.janela_pagar_7)
+
+                        self.ui.botao_apagar_7.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_7.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 8:
                         # revelando o botões das contas
@@ -2953,21 +3219,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_8.setEnabled(True)
                         self.ui.nome_da_conta_8.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[7]['nome']}{self.db.lista_correta[7]['sobrenome']}"
-                        self.ui.botao_entrar_8.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[7]['avatar']
                         self.ui.botao_entrar_8.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_8.clicked.connect(self.select_apagar8)
-                        self.ui.botao_apagar_8.clicked.connect(self.janela_pagar_8)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[7]['nome']}{self.db.lista_correta[7]['sobrenome']}"
+                        self.ui.botao_entrar_8.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_8.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_8.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_8.clicked.connect(
+                            self.select_apagar8)
+                        self.ui.botao_apagar_8.clicked.connect(
+                            self.janela_pagar_8)
+
+                        self.ui.botao_apagar_8.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_8.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 9:
                         # revelando o botões das contas
@@ -2975,21 +3246,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_9.setEnabled(True)
                         self.ui.nome_da_conta_9.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[8]['nome']}{self.db.lista_correta[8]['sobrenome']}"
-                        self.ui.botao_entrar_9.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[8]['avatar']
                         self.ui.botao_entrar_9.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_9.clicked.connect(self.select_apagar9)
-                        self.ui.botao_apagar_9.clicked.connect(self.janela_pagar_9)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[8]['nome']}{self.db.lista_correta[8]['sobrenome']}"
+                        self.ui.botao_entrar_9.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_9.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_9.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_9.clicked.connect(
+                            self.select_apagar9)
+                        self.ui.botao_apagar_9.clicked.connect(
+                            self.janela_pagar_9)
+
+                        self.ui.botao_apagar_9.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_9.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 10:
                         # revelando o botões das contas
@@ -2997,21 +3273,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_10.setEnabled(True)
                         self.ui.nome_da_conta_10.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[9]['nome']}{self.db.lista_correta[9]['sobrenome']}"
-                        self.ui.botao_entrar_10.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[9]['avatar']
                         self.ui.botao_entrar_10.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_10.clicked.connect(self.select_apagar10)
-                        self.ui.botao_apagar_10.clicked.connect(self.janela_pagar_10)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[9]['nome']}{self.db.lista_correta[9]['sobrenome']}"
+                        self.ui.botao_entrar_10.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_10.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_10.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_10.clicked.connect(
+                            self.select_apagar10)
+                        self.ui.botao_apagar_10.clicked.connect(
+                            self.janela_pagar_10)
+
+                        self.ui.botao_apagar_10.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_10.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 11:
                         # revelando o botões das contas
@@ -3019,21 +3300,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_11.setEnabled(True)
                         self.ui.nome_da_conta_11.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[10]['nome']}{self.db.lista_correta[10]['sobrenome']}"
-                        self.ui.botao_entrar_11.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[10]['avatar']
                         self.ui.botao_entrar_11.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_11.clicked.connect(self.select_apagar11)
-                        self.ui.botao_apagar_11.clicked.connect(self.janela_pagar_11)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[10]['nome']}{self.db.lista_correta[10]['sobrenome']}"
+                        self.ui.botao_entrar_11.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_11.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_11.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_11.clicked.connect(
+                            self.select_apagar11)
+                        self.ui.botao_apagar_11.clicked.connect(
+                            self.janela_pagar_11)
+
+                        self.ui.botao_apagar_11.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_11.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 12:
                         # revelando o botões das contas
@@ -3041,21 +3327,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_12.setEnabled(True)
                         self.ui.nome_da_conta_12.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[11]['nome']}{self.db.lista_correta[11]['sobrenome']}"
-                        self.ui.botao_entrar_12.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[11]['avatar']
                         self.ui.botao_entrar_12.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_12.clicked.connect(self.select_apagar12)
-                        self.ui.botao_apagar_12.clicked.connect(self.janela_pagar_12)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[11]['nome']}{self.db.lista_correta[11]['sobrenome']}"
+                        self.ui.botao_entrar_12.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_12.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_12.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_12.clicked.connect(
+                            self.select_apagar12)
+                        self.ui.botao_apagar_12.clicked.connect(
+                            self.janela_pagar_12)
+
+                        self.ui.botao_apagar_12.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_12.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 13:
                         # revelando o botões das contas
@@ -3063,21 +3354,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_13.setEnabled(True)
                         self.ui.nome_da_conta_13.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[12]['nome']}{self.db.lista_correta[12]['sobrenome']}"
-                        self.ui.botao_entrar_13.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[12]['avatar']
                         self.ui.botao_entrar_13.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_13.clicked.connect(self.select_apagar13)
-                        self.ui.botao_apagar_13.clicked.connect(self.janela_pagar_13)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[12]['nome']}{self.db.lista_correta[12]['sobrenome']}"
+                        self.ui.botao_entrar_13.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_13.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_13.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_13.clicked.connect(
+                            self.select_apagar13)
+                        self.ui.botao_apagar_13.clicked.connect(
+                            self.janela_pagar_13)
+
+                        self.ui.botao_apagar_13.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_13.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     elif self.cont == 14:
                         # revelando o botões das contas
@@ -3085,21 +3381,26 @@ class TelaInicial(QMainWindow):
                         self.ui.botao_entrar_14.setEnabled(True)
                         self.ui.nome_da_conta_14.setText(nome_completo)
 
-                        # entrar
-                        nometabela = f"{self.db.lista_correta[13]['nome']}{self.db.lista_correta[13]['sobrenome']}"
-                        self.ui.botao_entrar_14.clicked.connect(lambda :self.sites(nometabela))
-
                         # avatar
                         self.db.carregar_contas()
                         avatar = self.db.lista_correta[13]['avatar']
                         self.ui.botao_entrar_14.setIcon(QIcon(avatar))
 
-                        # Apagar conta
-                        self.ui.botao_apagar_14.clicked.connect(self.select_apagar14)
-                        self.ui.botao_apagar_14.clicked.connect(self.janela_pagar_14)
+                        # entrar
+                        nometabela = f"{self.db.lista_correta[13]['nome']}{self.db.lista_correta[13]['sobrenome']}"
+                        self.ui.botao_entrar_14.clicked.connect(
+                            lambda: self.sites(nometabela))
 
-                        self.ui.botao_apagar_14.setIcon(QIcon('img\\img_apagar.png'))
-                        self.ui.user_14.setStyleSheet('background-color:#6c6c6c')
+                        # Apagar conta
+                        self.ui.botao_apagar_14.clicked.connect(
+                            self.select_apagar14)
+                        self.ui.botao_apagar_14.clicked.connect(
+                            self.janela_pagar_14)
+
+                        self.ui.botao_apagar_14.setIcon(
+                            QIcon('img\\img_apagar.png'))
+                        self.ui.user_14.setStyleSheet(
+                            'background-color:#6c6c6c')
 
                     self.cont += 1
 
@@ -3147,7 +3448,7 @@ class TelaInicial(QMainWindow):
     def select_apagar14(self):
         self.conta = 14
 
-    ''''''
+
 
     def apagar_conta_1(self):
         if self.conta == 1:
@@ -3163,7 +3464,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[0]["nome"]} {self.db.lista_correta[0]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3189,7 +3491,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[1]["nome"]} {self.db.lista_correta[1]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3215,7 +3518,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[2]["nome"]} {self.db.lista_correta[2]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3241,7 +3545,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[3]["nome"]} {self.db.lista_correta[3]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3267,7 +3572,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[4]["nome"]} {self.db.lista_correta[4]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3293,7 +3599,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[5]["nome"]} {self.db.lista_correta[5]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3319,7 +3626,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[6]["nome"]} {self.db.lista_correta[6]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3345,7 +3653,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[7]["nome"]} {self.db.lista_correta[7]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3371,7 +3680,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[8]["nome"]} {self.db.lista_correta[8]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3397,7 +3707,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[9]["nome"]} {self.db.lista_correta[9]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3423,7 +3734,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[10]["nome"]} {self.db.lista_correta[10]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3449,7 +3761,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[11]["nome"]} {self.db.lista_correta[11]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3475,7 +3788,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[12]["nome"]} {self.db.lista_correta[12]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3501,7 +3815,8 @@ class TelaInicial(QMainWindow):
 
             nome = f'{self.db.lista_correta[13]["nome"]} {self.db.lista_correta[13]["sobrenome"]}'
             self.ui.input.show()
-            self.ui.input.setStyleSheet('QFrame{background-color: rgb(18, 18, 18)};')
+            self.ui.input.setStyleSheet(
+                'QFrame{background-color: rgb(18, 18, 18)};')
             self.ui.input_saida.setStyleSheet('font: 87 9pt "Segoe UI Black";'
                                               'color:rgb(255, 80, 80);')
             self.ui.input_saida.setText(f'A conta "{nome}" Foi Deletada!')
@@ -3570,6 +3885,23 @@ class TelaInicial(QMainWindow):
     def sites(self, nome_tabela):
         self.tela_site = TelaSites(nome_tabela)
         self.tela_site.show()
+
+    '''FUNÇÕES WEB LINKS'''
+    def github(self):
+        self.web.load(QUrl('https://github.com/ryanprogrammer'))
+        self.web.show()
+
+    def whatsapp(self):
+        self.web.load(QUrl('https://api.whatsapp.com/send?phone=5511990132993&text=Opaa%2C%20vim%20pelo%20software'))
+        self.web.show()
+
+    def linkedin(self):
+        self.web.load(QUrl('https://www.linkedin.com/in/ryanbarbosasilva/'))
+        self.web.show()
+
+    def twitter(self):
+        self.web.load(QUrl('https://twitter.com/ry4nzk'))
+        self.web.show()
 
 
 if __name__ == '__main__':

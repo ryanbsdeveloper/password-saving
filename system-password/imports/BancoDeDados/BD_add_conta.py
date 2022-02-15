@@ -67,41 +67,36 @@ class BD:
             self.conexao.commit()
         except:
             pass
-        
+
     def excluir_registro(self, aid):
-            try:
-                self.cursor.execute(f"DELETE FROM {self.nome_da_tabela} WHERE id={aid}")
-            except:
-                print('ERRO AO EXCLUIR CONTA')
-            else:
-                self.conexao.commit()
-
-    def carregar_registros(self):
-            try:
-                self.cursor.execute(f'SELECT * FROM {self.nome_da_tabela}')
-                for v in self.cursor.fetchall():
-                    aid, site, senha, email = v
-                    self.dict2['id'] = aid
-                    self.dict2['site'] = site
-                    self.dict2['senha'] = senha
-                    self.dict2['email'] = email
-                    self.lista2.append(self.dict2.copy())
-            except:
-                pass
-            else:
-                for v in self.lista2:
-                    if v in self.lista_registro:
-                        pass
-                    else:
-                        self.lista_registro.append(v)
-
-    def inserir_registro(self, site, senha, email):
-            consulta = f'INSERT INTO {self.nome_da_tabela} (site, senha, email) VALUES (?, ?, ?)'
-            self.cursor.execute(consulta, (site, senha, email))
+        try:
+            self.cursor.execute(f"DELETE FROM {self.nome_da_tabela} WHERE id={aid}")
+        except:
+            print('ERRO AO EXCLUIR CONTA')
+        else:
             self.conexao.commit()
 
-if __name__ == '__main__':
-    bd = BD()
-    bd.nome_da_tabela = 'RyanSilva'
-    bd.carregar_registros()
-    print(bd.lista_registro)
+    def carregar_registros(self):
+        try:
+            self.cursor.execute(f'SELECT * FROM {self.nome_da_tabela}')
+            for v in self.cursor.fetchall():
+                aid, site, senha, email = v
+                self.dict2['id'] = aid
+                self.dict2['site'] = site
+                self.dict2['senha'] = senha
+                self.dict2['email'] = email
+                self.lista2.append(self.dict2.copy())
+        except:
+            pass
+        else:
+            for v in self.lista2:
+                if v in self.lista_registro:
+                    pass
+                else:
+                    self.lista_registro.append(v)
+
+    def inserir_registro(self, site, senha, email):
+        consulta = f'INSERT INTO {self.nome_da_tabela} (site, senha, email) VALUES (?, ?, ?)'
+        self.cursor.execute(consulta, (site, senha, email))
+        self.conexao.commit()
+
