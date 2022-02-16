@@ -1,2 +1,4 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+git config --global http.postBuffer 524288000
+venv filter=lfs diff=lfs merge=lfs -text
