@@ -19,7 +19,11 @@ class Ui_MainWindow(object):
         MainWindow.resize(830, 540)
         MainWindow.setMinimumSize(QtCore.QSize(830, 540))
         MainWindow.setMaximumSize(QtCore.QSize(830, 540))
+        MainWindow.setBaseSize(QtCore.QSize(830, 540))
         self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setMinimumSize(QtCore.QSize(830, 540))
+        self.centralwidget.setMaximumSize(QtCore.QSize(830, 540))
+        self.centralwidget.setBaseSize(QtCore.QSize(830, 540))
         self.centralwidget.setObjectName("centralwidget")
         self.verticalLayout = QtWidgets.QVBoxLayout(self.centralwidget)
         self.verticalLayout.setContentsMargins(0, 0, 0, 0)
@@ -1756,7 +1760,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
+        
         '''ATUALIZAÇÕES'''
         self.label_copiado.hide()
         self.info.hide()
@@ -1860,6 +1864,7 @@ class Ui_MainWindow(object):
         self.login.close()
         self.cadastrar.close()
         self.gera_senha.close()
+
 
 
     def retranslateUi(self, MainWindow):
