@@ -1,7 +1,11 @@
 ### PROJETO PESSOAL
 
 # Use você mesmo :heavy_check_mark:
-Aplicativo compilado, pronto para uso. [Clique aqui](https://drive.google.com/drive/folders/1uSO1ALf7sJSxaafdxifE9i9CJO8_s3_B?usp=sharing)
+
+**Faça o download da pasta "Aplicativo compilado" completa, no google drive.**
+- Execute o app.exe
+
+Para donwload do aplicativo, [clique aqui](https://drive.google.com/drive/folders/1uSO1ALf7sJSxaafdxifE9i9CJO8_s3_B?usp=sharing)
 
 
 # Descrição
@@ -9,6 +13,13 @@ Software que salva senhas e gera senhas criptografadas. :closed_lock_with_key:
 
 # Desenvolvimento
 Comecei a desenvolver esse aplicativo pra uso pessoal no primeiro dia do ano de 2022, primeira versão terminei em 24/01 e agora com novas atualizações finalizada em 15/02.
+
+Usei cx-freeze para compilar o software, o arquivo **setup.py** contém as configurações para compilar.
+
+## :warning: Observação caso for usar o código
+o editor de código 'Visual studio code' não carregas as imagens. *incompatibilidade com o PyQt5, não tenho certeza.*
+
+**Execute o códido pelo cmd / powershell ou outros, pycharm, eclipse...**
 
 # Passos para clonar o repositório 🏁
 
