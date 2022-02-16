@@ -25,7 +25,15 @@ o editor de código 'Visual studio code' não carregas as imagens. *incompatibil
 
 - clone ou faça o download do aquivo.zip em sua maquina.
 - abra a pasta completa em seu editor de código.
-- Tenha a biblioteca pyqt5 e pyperclip instalada em seu ambiente virtual ou na sua máquina. 🛑**IMPORTANTE**🛑
+- Tenha as bibliotecas instalada em seu ambiente virtual ou na sua máquina. 🛑**IMPORTANTE**🛑
+
+    **BIBLIOTECAS:**
+    
+  - PyQt5
+  - PyQtWebEngine
+  - pyperclip
+  - requests
+ 
 - execute o arquivo main.py 
 
 ## Imagens do software
