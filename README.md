@@ -1,4 +1,4 @@
-### PROJETO PESSOAL
+### *Projeto pessoal*
 
 # Use você mesmo :heavy_check_mark:
 
